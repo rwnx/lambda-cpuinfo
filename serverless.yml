@@ -1,4 +1,4 @@
-service: lambda-cpu-alloc
+service: lambda-cpuinfo
 
 frameworkVersion: '2'
 

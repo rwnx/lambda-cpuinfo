@@ -1,5 +1,5 @@
 {
-  "name": "lambda-cpu-alloc",
+  "name": "lambda-cpuinfo",
   "description": "",
   "version": "0.1.0",
   "dependencies": {},
