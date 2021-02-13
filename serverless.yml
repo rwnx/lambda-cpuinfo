@@ -7,27 +7,46 @@ provider:
   runtime: python3.8
 
 functions:
-  process_small:
+  cpu1:
     memorySize: 1792
     handler: handler.getcpu
     events:
-      - http: GET /small
+      - http: GET /cpu1
 
-  process_medium:
+  cpu2:
     memorySize: 3584
     handler: handler.getcpu
     events:
-      - http: GET /medium1
+      - http: GET /cpu2
 
-  process_threshold:
+  cpu2plus:
     memorySize: 3585
     handler: handler.getcpu
     events:
-      - http: GET /medium2
-  process_threshold:
-    memorySize: 10000
+      - http: GET /cpu2plus
+
+  cpu3:
+    memorySize: 5377
     handler: handler.getcpu
     events:
-      - http: GET /large
+      - http: GET /cpu3
+
+  cpu4:
+    memorySize: 7169
+    handler: handler.getcpu
+    events:
+      - http: GET /cpu4
+
+  cpu5:
+    memorySize: 8961
+    handler: handler.getcpu
+    events:
+      - http: GET /cpu5
+
+  max:
+    memorySize: 10240
+    handler: handler.getcpu
+    events:
+      - http: GET /max
 plugins:
   - serverless-python-requirements
