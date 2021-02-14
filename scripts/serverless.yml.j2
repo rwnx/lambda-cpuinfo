@@ -1,0 +1,21 @@
+service: lambda-cpuinfo
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: python3.8
+package:
+  exclude:
+    - scripts/**
+    - docs/**
+functions:
+{% for size in sizes %}
+  cpu{{size}}:
+    memorySize: {{size}}
+    handler: handler.getcpu
+    events:
+      - http: GET /cpu{{size}}
+{% endfor %}
+plugins:
+  - serverless-python-requirements

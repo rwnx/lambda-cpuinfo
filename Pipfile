@@ -4,9 +4,13 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+jinja2 = "*"
 
 [packages]
 py-cpuinfo = "==7.0.0"
 
 [requires]
 python_version = "3.8"
+
+[scripts]
+generate_sls = "python scripts/generate_serverless_config.py"

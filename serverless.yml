@@ -5,48 +5,71 @@ frameworkVersion: '2'
 provider:
   name: aws
   runtime: python3.8
-
+package:
+  exclude:
+    - scripts/**
+    - docs/**
 functions:
-  cpu1:
-    memorySize: 1792
+
+  cpu128:
+    memorySize: 128
     handler: handler.getcpu
     events:
-      - http: GET /cpu1
+      - http: GET /cpu128
 
-  cpu2:
-    memorySize: 3584
+  cpu3008:
+    memorySize: 3008
     handler: handler.getcpu
     events:
-      - http: GET /cpu2
+      - http: GET /cpu3008
 
-  cpu2plus:
-    memorySize: 3585
+  cpu3009:
+    memorySize: 3009
     handler: handler.getcpu
     events:
-      - http: GET /cpu2plus
+      - http: GET /cpu3009
 
-  cpu3:
-    memorySize: 5377
+  cpu5307:
+    memorySize: 5307
     handler: handler.getcpu
     events:
-      - http: GET /cpu3
+      - http: GET /cpu5307
 
-  cpu4:
-    memorySize: 7169
+  cpu5308:
+    memorySize: 5308
     handler: handler.getcpu
     events:
-      - http: GET /cpu4
+      - http: GET /cpu5308
 
-  cpu5:
-    memorySize: 8961
+  cpu7076:
+    memorySize: 7076
     handler: handler.getcpu
     events:
-      - http: GET /cpu5
+      - http: GET /cpu7076
 
-  max:
+  cpu7077:
+    memorySize: 7077
+    handler: handler.getcpu
+    events:
+      - http: GET /cpu7077
+
+  cpu8845:
+    memorySize: 8845
+    handler: handler.getcpu
+    events:
+      - http: GET /cpu8845
+
+  cpu8846:
+    memorySize: 8846
+    handler: handler.getcpu
+    events:
+      - http: GET /cpu8846
+
+  cpu10240:
     memorySize: 10240
     handler: handler.getcpu
     events:
-      - http: GET /max
+      - http: GET /cpu10240
+
 plugins:
   - serverless-python-requirements
