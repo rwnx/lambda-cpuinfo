@@ -17,10 +17,10 @@ The [documentation](https://docs.aws.amazon.com/lambda/latest/dg/configuration-m
 | 7077 - 8845   | 5          |
 | 8846 - 10240  | 6          |
 
-![Graph](docs/graph.png)
-
-
 # Why is this important?
+
+![Graph](docs/graph.svg)
+
 This can lead to degraded performance if your application expects unthrottled multi-core performance, and your memory allocation doesn't provide enough credits to sustain all cores described. 
 
 Likewise, This opens up a new category of price-performance tuning, since highly threadable workflows can benefit from additional core assignments without a linear increase in price. 
