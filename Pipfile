@@ -9,4 +9,4 @@ verify_ssl = true
 py-cpuinfo = "==7.0.0"
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"
